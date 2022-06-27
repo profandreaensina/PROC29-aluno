@@ -22,19 +22,18 @@ function setup()
   world = engine.world;
 
   ground = new Ground(200,680,600,20);
-  rope = new Rope(7,{x:245,y:30});
+  rope = new Rope(7, {x:245,y:30});
 
-  fruit_options = {density: 0.001}
-  fruit = Bodies.circle(300,300,20);
+  //01. criar opções fisicas da fruta
+  
+  //02.criar corpo da fruta posições x 300,y 300,largura 20
+  
+  //03.adicionar fruta ao composite
 
-  Matter.Composite.add(rope.body, fruit);
-
-  fruit_con = new Link(rope,fruit);
+  //04. ligar a fruta em seu composite com constraint
 
   rectMode(CENTER);
   ellipseMode(RADIUS);
-  textSize(50)
-  
 }
 
 function draw() 
